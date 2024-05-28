@@ -14,14 +14,27 @@ public class Article {
 
     public Article() {}
 
-    public Article(Long articleId, Long boardId, String title, String content) {
-        this.authorId = articleId;
+    public Article(Long boardId, String title, String content) {
         this.boardId = boardId;
         this.title = title;
         this.content = content;
+    }
 
-        this.created_at = LocalDateTime.now();
-        this.updated_at = LocalDateTime.now();
+    public Article(Long authorId, Long boardId, String title, String content) {
+        this.authorId = authorId;
+        this.boardId = boardId;
+        this.title = title;
+        this.content = content;
+    }
+
+    public Article(Long id, Long authorId, Long boardId, String title, String content, LocalDateTime created_at, LocalDateTime updated_at) {
+        this.id = id;
+        this.authorId = authorId;
+        this.boardId = boardId;
+        this.title = title;
+        this.content = content;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
     }
 
     public Long getId() {

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>게시판</title>
+</head>
+<body>
+    <h1 th:text="${boardName}">게시판 이름</h1>
+    <ul>
+        <li th:each="article : ${articles}">
+            <a th:href="@{|/articles/${article.id}|}" th:text="${article.title}"></a>
+        </li>
+    </ul>
+</body>
+</html>

@@ -11,6 +11,11 @@ public class Board {
         this.name = name;
     }
 
+    public Board(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
